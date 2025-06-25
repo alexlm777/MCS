@@ -7,7 +7,7 @@
 </head>
 <body>
   <div class="container">
-    <h1>Formulario de Seguimiento MCS</h1>
+    <h1>MÓDULO CONECTANDO SALUD, LA TINTA, A.V.</h1>
     <form id="mcsForm">
       <!-- ¿Se permite la grabación de la llamada? -->
       <div class="form-group">
@@ -62,7 +62,7 @@
 
       <!-- Responsable -->
       <div class="form-group">
-        <label for="responsable">Nombre/Apellido del AE o ATT responsable</label>
+        <label for="responsable">Nombre/Apellido del AE o ATT responsable del seguimiento</label>
         <input type="text" id="responsable" name="responsable" required>
       </div>
 
@@ -73,8 +73,17 @@
           <option value="">Seleccione...</option>
           <option value="ae">AE</option>
           <option value="att">ATT</option>
-          <option value="comadrona">Comadrona</option>
           <option value="tsr">TSR</option>
+          <option value="familiar">Familiar</option>
+          <option value="paciente">Paciente</option>
+          <option value="comadrona">Comadrona</option>
+          <option value="partero">Partero</option>
+          <option value="medico">Médico</option>
+          <option value="enfermero_de_distrito">Enfermero de Distrito</option>
+          <option value="coordinador_de_distrito">Coordinador de Distrito</option>
+          <option value="encargado_de_emergencias">Encargado de Emergencias</option>
+          <option value="bombero">Bombero</option>
+          <option value="cocode">COCODE</option>
           <option value="ep_dms">EP DMS</option>
         </select>
       </div>
@@ -101,6 +110,7 @@
           <option value="">Seleccione...</option>
           <option value="emergencia">Emergencia</option>
           <option value="morbilidad">Morbilidad</option>
+          <option value="no_aplica">No Aplica</option>
         </select>
       </div>
 
@@ -114,6 +124,7 @@
           <option value="traumatologia">Traumatología</option>
           <option value="medicina_general">Medicina General</option>
           <option value="cirugia">Cirugía</option>
+          <option value="no_especifica">No Especifica</option>
         </select>
       </div>
 
@@ -219,8 +230,35 @@
       </div>
 
       <button type="submit">Enviar</button>
+      <button type="button" id="showRecordsBtn">Mostrar registros</button>
+      <button type="button" id="showStatsBtn">Mostrar estadísticas</button>
     </form>
+
+    <!-- Sección para registros -->
+    <div id="recordsSection" class="hidden">
+      <h2>Registros</h2>
+      <table id="recordsTable">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Tipo de Consulta</th>
+            <th>Fecha</th>
+            <th>Turnista</th>
+            <th>Paciente</th>
+            <!-- puedes agregar más columnas según necesites -->
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+    <!-- Sección para estadísticas -->
+    <div id="statsSection" class="hidden">
+      <h2>Estadísticas</h2>
+      <ul id="statsList"></ul>
+    </div>
   </div>
   <script src="app.js"></script>
 </body>
 </html>
+
