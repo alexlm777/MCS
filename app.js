@@ -1,6 +1,6 @@
 // app.js
 
-const SCRIPT_URL = 'https://script.google.com/macros/s/ABCDEFGHIJK1234567890/exec';
+const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwL81yrCJUxv_FDYHQIra58zRXA2gpZeeLRlKrmPG5YMTcL4zYRuEjxKTh5Z9STtz1AJg/exec';
 const form            = document.getElementById('mcsForm');
 const recordsSection  = document.getElementById('recordsSection');
 const statsSection    = document.getElementById('statsSection');
